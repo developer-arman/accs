@@ -8,11 +8,11 @@
 
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--color-vuse-bg);
   width: 100%;
   z-index: 3;
   position: fixed;
-  border-bottom: 1px solid var(--color-neutral-300);
+  box-shadow: 1px 1px 10px rgb(255 255 255 / 47.8%);
 }
 
 header nav {
@@ -43,9 +43,12 @@ header nav[aria-expanded='true'] {
   header nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 0 32px;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 0 32px 8px;
+    height: auto;
+    align-items: center;
   }
 
   header nav[aria-expanded='true'] {
@@ -57,6 +60,11 @@ header nav[aria-expanded='true'] {
 header nav p {
   margin: 0;
   line-height: 1;
+  color: #fff;
+}
+
+header nav p a {
+  color: #fff !important;
 }
 
 /* hamburger */
@@ -152,6 +160,7 @@ header nav .nav-brand a {
   font: var(--type-headline-1-font);
   letter-spacing: var(--type-headline-1-letter-spacing);
   font-weight: bold;
+  color: #fff;
 }
 
 li.nav-drop img {
@@ -195,6 +204,7 @@ header nav .nav-sections ul > li > a {
 
 header nav .nav-brand a:hover {
   text-decoration: none;
+  color: #fff;
 }
 
 header nav .nav-sections ul > li ul {
@@ -214,6 +224,7 @@ header nav .nav-sections ul > li:empty {
     display: block;
     visibility: visible;
     white-space: nowrap;
+    order: 3;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -224,6 +235,10 @@ header nav .nav-sections ul > li:empty {
     align-self: center;
   }
 
+  header .nav-drop p {
+    cursor: pointer;
+  }
+
   header nav .nav-sections .default-content-wrapper > ul > li,
   header nav .nav-sections .nav-drop {
     border-radius: 4px;
@@ -232,6 +247,7 @@ header nav .nav-sections ul > li:empty {
 
   header nav .nav-sections .default-content-wrapper > ul > li a {
     text-decoration: none;
+
   }
 
   header nav .nav-sections ul {
@@ -263,7 +279,7 @@ header nav .nav-sections ul > li:empty {
     min-height: var(--desktop-panel-min-height);
     padding: var(--spacing-xbig);
     position: absolute;
-    top: var(--spacing-large);
+    top: 100px;
     width: 100%;
   }
 
@@ -301,10 +317,6 @@ header nav .nav-sections ul > li:empty {
     max-width: var(--desktop-item-panel-max-width);
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li:hover,
-  header nav .nav-sections .nav-drop[aria-expanded='true'] {
-    background-color: var(--color-neutral-200);
-  }
 }
 
 /* tools */
@@ -330,12 +342,12 @@ header nav .nav-tools {
   height: 100%;
   gap: var(--spacing-small);
   align-items: center;
-  background: var(--background-color);
   z-index: 3;
 }
 
 header nav .nav-tools-wrapper > button {
-  color: var(--color-brand-700);
+  color: #fff;
+  filter: invert(1);
   background: transparent;
   padding: 10px;
   border: unset;
@@ -343,6 +355,7 @@ header nav .nav-tools-wrapper > button {
   height: 40px;
   width: 40px;
 }
+
 
 header nav .nav-tools button.nav-cart-button {
   background-image: url('../../icons/cart.svg');
@@ -617,7 +630,6 @@ li
   }
 
   header nav[aria-expanded='true'] .nav-tools {
-    background: var(--background-color);
     bottom: 0;
     height: auto;
     left: 0;
@@ -625,6 +637,7 @@ li
     padding: var(--spacing-small) var(--spacing-medium);
     position: fixed;
     width: 272px;
+    border-top: 2px solid var(--color-neutral-200);
   }
 
   header nav[aria-expanded='true'] .nav-tools-panel--show {
@@ -643,6 +656,10 @@ li
     font: var(--type-headline-2-default-font);
     letter-spacing: var(--type-headline-2-default-letter-spacing);
     padding: var(--spacing-small) 0;
+  }
+
+  .submenu-wrapper ul li a {
+    color: white !important
   }
 
   header nav .nav-sections ul li a {
@@ -695,7 +712,7 @@ li
   }
 
   header nav .nav-sections ul > li.nav-drop.active .submenu-wrapper {
-    background: var(--background-color);
+    background: var(--color-vuse-bg);
     display: block;
     height: 100%;
     left: 0;
@@ -711,7 +728,6 @@ li
   }
 
   header nav .nav-sections ul > li.nav-drop .submenu-header {
-    background: var(--background-color);
     height: var(--spacing-large);
     left: 0;
     position: fixed;

@@ -1,5 +1,6 @@
 footer {
-    background-color: var(--color-neutral-100);
+    background-color: #1d1d1b;
+    color: #fff;
     font: var(--type-body-2-default-font);
     letter-spacing: var(--type-body-2-default-letter-spacing);
 }
@@ -17,6 +18,15 @@ footer .footer p {
 .storeview-switcher-button {
     background: transparent;
     padding-left: 0;
+}
+
+footer .button-container a {
+    color: #fff;
+}
+
+footer .button-container a:hover {
+    color: cyan;
+    text-decoration: none;
 }
 
 .storeview-modal-storeview-title {

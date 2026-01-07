@@ -13,6 +13,7 @@
 /* stylelint-disable no-empty-source */
 :root, .dropin-design {
   /* Adobe Commerce Dropin design tokens */
+  --color-vuse-bg: #1d1d1b;
   --color-brand-300: #6d6d6d;
   --color-brand-500: #454545;
   --color-brand-600: #383838;
@@ -168,6 +169,7 @@ header {
 
 main {
   grid-row: 2;
+  background-color: #1d1d1b;
 }
 
 footer {
@@ -194,6 +196,7 @@ h6 {
   margin-bottom: 0.25em;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: #fff;
 }
 
 h1 {
@@ -234,6 +237,7 @@ pre,
 blockquote {
   margin-top: 1.5625em;
   margin-bottom: 1.5625em;
+  color: #fff;
 }
 
 hr {
@@ -408,6 +412,7 @@ main .section.highlight {
   background-color: var(--color-neutral-100);
   margin: 0;
   padding: var(--spacing-xbig) 0;
+  display: none;
 }
 
 /* Base Design System Tokens */
