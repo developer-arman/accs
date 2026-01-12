@@ -446,12 +446,13 @@ header .nav-algolia-search-panel {
 @media (max-width: 900px) {
   header .nav-algolia-search-panel {
     min-width: 300px;
-    max-width: 90vw;
+    max-width: 100vw;
+    margin: 0 auto;
   }
 
   header nav .nav-tools input.nav-algolia-search-input {
     min-width: auto;
-    width: 60px;
+    width: 100px;
   }
 
   header nav .nav-tools {
@@ -460,6 +461,10 @@ header .nav-algolia-search-panel {
     gap: 8px;
   }
   
+}
+
+.search-wrapper {
+  display: none;
 }
 
 header .nav-algolia-search-panel .algolia-search-result {
@@ -656,7 +661,7 @@ header .nav-search-input .search_autocomplete .popover-container {
   }
 
   header nav .nav-tools-panel {
-    top: calc(-12px + var(--nav-height));
+    top: calc(-80px + var(--nav-height));
   }
 
   header nav .minicart-panel {
