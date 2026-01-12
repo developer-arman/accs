@@ -7,8 +7,6 @@ import { render as provider } from '@dropins/storefront-product-discovery/render
 import { Button, Icon, provider as UI } from '@dropins/tools/components.js';
 import { search } from '@dropins/storefront-product-discovery/api.js';
 // Algolia Search
-import { initializeAlgolia } from '../../scripts/initializers/algolia.js';
-import { searchProducts as algoliaSearchProducts } from '../../dropins/algoliaSearch/api.js';
 // Wishlist Dropin
 import { WishlistToggle } from '@dropins/storefront-wishlist/containers/WishlistToggle.js';
 import { render as wishlistRender } from '@dropins/storefront-wishlist/render.js';
@@ -17,6 +15,8 @@ import * as cartApi from '@dropins/storefront-cart/api.js';
 import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
 // Event Bus
 import { events } from '@dropins/tools/event-bus.js';
+import { searchProducts as algoliaSearchProducts } from '../../dropins/algoliaSearch/api.js';
+import { initializeAlgolia } from '../../scripts/initializers/algolia.js';
 // AEM
 import { readBlockConfig } from '../../scripts/aem.js';
 import { fetchPlaceholders, getProductLink } from '../../scripts/commerce.js';

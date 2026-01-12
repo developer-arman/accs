@@ -110,11 +110,13 @@ async function loadEager(doc) {
       console.error('Error initializing commerce configuration:', e);
       loadErrorPage(418);
     }
-    
-    if (window.location.pathname === '/' || window.location.pathname === '/index') {
+
+    const paths = ['/', '/index', '/offers', '/discover-ultra', '/subscriptions', '/promotions', '/blogs', '/our-policies'];
+
+    if (paths.includes(window.location.pathname)) {
       document.body.classList.add('home');
     }
-    
+
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }

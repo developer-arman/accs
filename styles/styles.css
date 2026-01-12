@@ -178,7 +178,7 @@ footer {
 }
 
 /* Home page specific background */
-body.home main {
+body.home {
   background-color: #1d1d1b;
 }
 
@@ -203,7 +203,7 @@ h6 {
   line-height: 1.25;
   scroll-margin: 40px;
   color: #fff;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 h1 {

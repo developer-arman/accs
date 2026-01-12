@@ -157,14 +157,14 @@ export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  
+
   // Initialize labels and overlay
   labels = await fetchPlaceholders();
-  
+
   overlay = document.createElement('div');
   overlay.classList.add('overlay');
   document.querySelector('header').insertAdjacentElement('afterbegin', overlay);
-  
+
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -501,7 +501,7 @@ export default async function decorate(block) {
 
     try {
       algoliaSearchInput.disabled = true;
-      
+
       const [
         { initializeAlgolia },
         { searchProducts: searchProductsFn },
@@ -513,7 +513,7 @@ export default async function decorate(block) {
       await initializeAlgolia();
       searchProducts = searchProductsFn;
       algoliaInitialized = true;
-      
+
       algoliaSearchInput.disabled = false;
       algoliaSearchInput.focus();
     } catch (error) {
@@ -544,7 +544,7 @@ export default async function decorate(block) {
         });
 
         if (response.results && response.results.length > 0) {
-          const resultsHTML = response.results.map(result => `
+          const resultsHTML = response.results.map((result) => `
             <div class="algolia-result-item" data-url="${result.url || ''}" data-sku="${result.sku || ''}">
               <div class="algolia-result-image-wrapper ${!result.image ? 'no-image' : ''}">
                 ${result.thumbnail_url ? `<img src="${result.thumbnail_url}" alt="${result.name || 'Product'}" class="algolia-result-image" />` : '<div class="algolia-result-image-placeholder"></div>'}
@@ -567,10 +567,10 @@ export default async function decorate(block) {
           `;
 
           // Add click handlers for result items
-          algoliaSearchResult.querySelectorAll('.algolia-result-item').forEach(item => {
+          algoliaSearchResult.querySelectorAll('.algolia-result-item').forEach((item) => {
             item.addEventListener('click', () => {
-              const url = item.dataset.url;
-              const sku = item.dataset.sku;
+              const { url } = item.dataset;
+              const { sku } = item.dataset;
               if (url) {
                 window.location.href = url;
               } else if (sku) {
