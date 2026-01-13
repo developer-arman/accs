@@ -211,7 +211,6 @@ header nav .nav-sections {
 header nav[aria-expanded='true'] .nav-sections {
   display: block;
   visibility: visible;
-  align-self: start;
 }
 
 header nav .nav-sections ul {
@@ -882,6 +881,13 @@ li
     position: fixed;
     left: 275px;
     z-index: 5;
+    top: 20px;
+    background: transparent;
+    color: white;
+  }
+
+  header .nav-wrapper:has(nav[aria-expanded='true']) .algolia-search-wrapper{
+     display: none;
   }
 
   header nav {
