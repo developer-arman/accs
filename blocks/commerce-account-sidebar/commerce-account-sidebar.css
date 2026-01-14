@@ -39,6 +39,7 @@
     margin: 0 0 var(--spacing-xxsmall);
     border: none;
     text-decoration: none;
+    color: #000;
 }
 
 .commerce-account-sidebar-item-subtitle {

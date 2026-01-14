@@ -386,7 +386,7 @@ header nav .nav-tools {
 }
 
 header nav .nav-tools-wrapper > button {
-  color: #fff;
+  color: #000;
   filter: invert(1);
   background: transparent;
   padding: 10px;
@@ -828,7 +828,7 @@ li
 .dropdown-wrapper.nav-tools-wrapper .nav-auth-menu-panel .authenticated-user-menu li button {
   cursor: pointer;
   background-color: transparent !important;
-  color: currentcolor !important;
+  color: #000 !important;
   padding: 12px 15px !important;
   display: inline-block !important;
   width: 100% !important;
