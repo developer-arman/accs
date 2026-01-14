@@ -244,6 +244,15 @@ pre,
 blockquote {
   margin-top: 1.5625em;
   margin-bottom: 1.5625em;
+  color: #000;
+}
+
+.home p,
+.home dl,
+.home ol,
+.home ul,
+.home pre,
+.home blockquote {
   color: #fff;
 }
 

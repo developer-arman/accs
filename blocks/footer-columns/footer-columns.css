@@ -46,6 +46,10 @@
   }
 }
 
+.footer-columns.block p {
+  color: #fff;
+}
+
 .footer-columns > div {
   display: flex;
   flex-direction: column;
